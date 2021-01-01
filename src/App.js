@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/HeaderComponent';
+import Footer from './components/FooterComponent';
+const arr = [
+  {
+    name1: "Abid",
+    name2: "Tayyab"
+  },
+  {
+    name1: "Adeel",
+    name2: "Naveed"
+  },
+  {
+    name1: "Hamza",
+    name2: "Gull"
+  }
+];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {
+        arr.slice(1,arr.length).map((arrObj,index) => {
+          return <Header name1={arrObj.name1} name2={arrObj.name2} btn={index}/>
+        })
+      }
+      <Footer />
     </div>
   );
 }
