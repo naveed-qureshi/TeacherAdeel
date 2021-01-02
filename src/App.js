@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/HeaderComponent';
 import Footer from './components/FooterComponent';
+import Class from './components/ClassComponent';
 const arr = [
   {
     name1: "Abid",
@@ -25,6 +26,7 @@ function App() {
         })
       }
       <Footer />
+      <Class name="Naveed" />
     </div>
   );
 }
